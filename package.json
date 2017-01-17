@@ -1,0 +1,51 @@
+{
+  "name": "js-jumpstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --watch",
+    "open": "node tools/srcServer.js",
+    "start": "npm-run-all --parallel open test"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.13.1",
+    "eslint-loader": "^1.6.1",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "open": "0.0.5"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "mocha": true
+    },
+    "rules": {
+      "no-console": "off",
+      "no-debugger": "warn"
+    }
+  }
+}
